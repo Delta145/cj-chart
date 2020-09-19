@@ -1,10 +1,10 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const ChartContainer = styled.div`
   border-radius: 5px;
   max-width: max-content;
   margin-bottom: 30px;
-  background: ${({theme}) => theme.portfolioChart.general.containerBackground};
+  background: white;
 `;
 
 export const Percents = styled.span`
@@ -36,7 +36,7 @@ CurrencyInfo.Balance = styled.span`
   font-weight: bold;
   font-size: 30px;
   line-height: 41px;
-  color: ${({theme}) => theme.portfolioChart.general.infoBalance};
+  color: white;
 `;
 
 const InfoWrapper = styled.div`
@@ -57,7 +57,7 @@ const Btn = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: ${({theme}) => theme.portfolioChart.buttons.backgroundInactive};
+  background: white;
   border-radius: 3px;
   > span {
     font-family: Nunito;
@@ -65,7 +65,7 @@ const Btn = styled.div`
     font-weight: 600;
     font-size: 12px;
     line-height: 16px;
-    color: ${({theme}) => theme.portfolioChart.buttons.textInactive};
+    color: white;
   }
 
   margin-right: 2px;
@@ -78,10 +78,10 @@ const BtnWrapper = styled.div`
   }
 
   .active {
-    background: ${({theme}) => theme.portfolioChart.buttons.backgroundActive};
+    background: white;
   }
   .active > span {
-    color: ${({theme}) => theme.portfolioChart.buttons.textActive};
+    color: white;
   }
   margin-top: 7px;
   display: flex;
@@ -105,7 +105,7 @@ const Canvas = styled.span`
   }
 
   .line {
-    stroke: ${({theme}) => theme.portfolioChart.graph.lineStroke};
+    stroke: white;
     stroke-width: 1px;
     fill: none;
   }
@@ -115,21 +115,21 @@ const Canvas = styled.span`
   }
 
   #infoPolygon {
-    fill: ${({theme}) => theme.portfolioChart.tooltip.fillWrapper};
-    stroke: ${({theme}) => theme.portfolioChart.tooltip.colorStroke};
+    fill: white;
+    stroke: white;
     transform: translate(-37px, -37px);
   }
 
   #infoPolygonLine {
-    stroke: ${({theme}) => theme.portfolioChart.tooltip.fillWrapper};
+    stroke: white;
   }
 
   .infoAxisY {
-    fill: ${({theme}) => theme.portfolioChart.tooltip.fillInfoAxisY};
+    fill: white;
   }
 
   .infoAxisX {
-    fill: ${({theme}) => theme.portfolioChart.tooltip.fillInfoAxisX};
+    fill: white;
   }
 
   .context {
@@ -150,11 +150,11 @@ const Canvas = styled.span`
   }
 
   .stop-left {
-    stop-color: ${({theme}) => theme.portfolioChart.graph.gradientTop};
+    stop-color: white;
   }
 
   .stop-right {
-    stop-color: ${({theme}) => theme.portfolioChart.graph.gradientBottom};
+    stop-color: white;
   }
 
   .svg-content {
@@ -171,9 +171,9 @@ const Canvas = styled.span`
   }
 
   .tooltip {
-    fill: ${({theme}) => theme.portfolioChart.tooltip.fillWrapper};
+    fill: white;
     stroke-width: 1px;
-    stroke: ${({theme}) => theme.portfolioChart.tooltip.colorStroke};
+    stroke: white;
   }
 
   .zoom {
@@ -207,7 +207,7 @@ const Canvas = styled.span`
 
   .focus circle {
     fill: #f1f3f3;
-    stroke: ${({theme}) => theme.portfolioChart.general.circleStroke};
+    stroke: white;
     stroke-width: 3px;
   }
 
@@ -231,4 +231,12 @@ const Canvas = styled.span`
   }
 `;
 
-export {CurrencyInfo, InfoWrapper, ChartContainer, Btn, BtnWrapper, Canvas, CanvasWrapper};
+export {
+  CurrencyInfo,
+  InfoWrapper,
+  ChartContainer,
+  Btn,
+  BtnWrapper,
+  Canvas,
+  CanvasWrapper,
+};
