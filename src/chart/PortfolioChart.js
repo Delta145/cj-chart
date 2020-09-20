@@ -167,6 +167,10 @@ const PortfolioChart = (props) => {
     };
   });
 
+  data.sort((a, b) => {
+    return a.x.getTime() > b.x.getTime();
+  })
+
   // const data = props.data.map(d => {
   //   let x = new Date(d.date);
   //   let y = d.close;
@@ -459,8 +463,7 @@ const PortfolioChart = (props) => {
         // focusPoints.style('display', null);
         const currentX = d3.mouse(this)[0];
         const x0 = x.invert(currentX);
-        const iDate = getBisectDate(data, x0, 1);
-        const i = data.length >= iDate ? iDate - 1 : iDate;
+        const i = getBisectDate(data, x0, 1);
         const d0 = data[i - 1];
         const d1 = data[i];
         if (d0 && d1) {
@@ -641,7 +644,7 @@ const PortfolioChart = (props) => {
           </CurrencyInfo>
         ) : (
           <CurrencyInfo ref={currencyInfoRef}>
-            <CurrencyInfo.Balance>{data[0].y}</CurrencyInfo.Balance>
+            <CurrencyInfo.Balance ref={currencyRef}>{data[0].y}</CurrencyInfo.Balance>
             <CurrencyInfo.Percents>
               <span ref={entirePercentRef} />
               <span ref={lastPercentRef} />

@@ -57,8 +57,7 @@ export const updateCurrencyInfo = (
 ) => {
   const x0 = x.invert(currentWidth);
   const i0 = getBisectDate(data, x.invert(0), 1);
-  const iDate = getBisectDate(data, x0, 1);
-  const i = data.length >= iDate ? iDate - 1 : iDate;
+  const i = getBisectDate(data, x0, 1);
   if (data[i0] && data[i] && data[i - 1]) {
     const first = data[i0].y;
     const current = data[i].y;
