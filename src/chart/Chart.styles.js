@@ -36,7 +36,7 @@ CurrencyInfo.Balance = styled.span`
   font-weight: bold;
   font-size: 30px;
   line-height: 41px;
-  color: white;
+  color: black;
 `;
 
 const InfoWrapper = styled.div`

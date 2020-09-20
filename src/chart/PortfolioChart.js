@@ -24,95 +24,124 @@ import {
 
 const dataBtn = ["1d", "1w", "1m", "1y", "All time"];
 
-const data = [
-  {
-    BTC: [],
-  },
-  {
-    USDT: [],
-  },
-  {
-    XRP: [],
-  },
-  {
-    EOS: [
-      {
-        id: 15542049,
-        created_at: "2020-08-21T10:46:58.791Z",
-        updated_at: "2020-08-21T10:46:58.791Z",
-        coin: "EOS",
-        quote: "USD",
-        lastUpdated: "2020-08-21T10:44:05.000Z",
-        marketCap: "3257363644.18885000000000000",
-        price: "3.48241107596000000",
-        percentChange1h: "-1.08193000000000000",
-        percentChange24h: "2.30957000000000000",
-        percentChange7d: "10.29130000000000000",
-        volume24h: "2982244476.13784000000000000",
-        uniq_item_id: "d327e4dc-9786-5957-9736-6f8492ef7899",
-        close: 745.23597025544,
-        date: "2020-08-21T10:44:05.000Z",
-      },
-      {
-        id: 15539390,
-        created_at: "2020-08-21T10:41:59.197Z",
-        updated_at: "2020-08-21T10:41:59.197Z",
-        coin: "EOS",
-        quote: "USD",
-        lastUpdated: "2020-08-21T10:38:05.000Z",
-        marketCap: "3262743179.22584600000000000",
-        price: "3.48816227676000000",
-        percentChange1h: "-1.11678000000000000",
-        percentChange24h: "2.51732000000000000",
-        percentChange7d: "10.48450000000000000",
-        volume24h: "2970874321.05054000000000000",
-        uniq_item_id: "3bcb6b9a-28c0-5527-aff1-466bb03d04b5",
-        close: 746.4667272266399,
-        date: "2020-08-21T10:38:05.000Z",
-      },
-      {
-        id: 15536731,
-        created_at: "2020-08-21T10:36:52.509Z",
-        updated_at: "2020-08-21T10:36:52.509Z",
-        coin: "EOS",
-        quote: "USD",
-        lastUpdated: "2020-08-21T10:34:04.000Z",
-        marketCap: "3265954319.10009770000000000",
-        price: "3.49159527052000000",
-        percentChange1h: "-1.01946000000000000",
-        percentChange24h: "2.63852000000000000",
-        percentChange7d: "10.59320000000000000",
-        volume24h: "2963208977.52188000000000000",
-        uniq_item_id: "2e226c55-0951-5ae1-b6f4-450c1f86b9ee",
-        close: 747.20138789128,
-        date: "2020-08-21T10:34:04.000Z",
-      },
-    ],
-  },
-];
+// const data = [
+//   {
+//     BTC: [],
+//   },
+//   {
+//     USDT: [],
+//   },
+//   {
+//     XRP: [],
+//   },
+//   {
+//     EOS: [
+//       {
+//         id: 15542049,
+//         created_at: "2020-08-21T10:46:58.791Z",
+//         updated_at: "2020-08-21T10:46:58.791Z",
+//         coin: "EOS",
+//         quote: "USD",
+//         lastUpdated: "2020-08-21T10:44:05.000Z",
+//         marketCap: "3257363644.18885000000000000",
+//         price: "3.48241107596000000",
+//         percentChange1h: "-1.08193000000000000",
+//         percentChange24h: "2.30957000000000000",
+//         percentChange7d: "10.29130000000000000",
+//         volume24h: "2982244476.13784000000000000",
+//         uniq_item_id: "d327e4dc-9786-5957-9736-6f8492ef7899",
+//         close: 745.23597025544,
+//         date: "2020-08-21T10:44:05.000Z",
+//       },
+//       {
+//         id: 15539390,
+//         created_at: "2020-08-21T10:41:59.197Z",
+//         updated_at: "2020-08-21T10:41:59.197Z",
+//         coin: "EOS",
+//         quote: "USD",
+//         lastUpdated: "2020-08-21T10:38:05.000Z",
+//         marketCap: "3262743179.22584600000000000",
+//         price: "3.48816227676000000",
+//         percentChange1h: "-1.11678000000000000",
+//         percentChange24h: "2.51732000000000000",
+//         percentChange7d: "10.48450000000000000",
+//         volume24h: "2970874321.05054000000000000",
+//         uniq_item_id: "3bcb6b9a-28c0-5527-aff1-466bb03d04b5",
+//         close: 746.4667272266399,
+//         date: "2020-08-21T10:38:05.000Z",
+//       },
+//       {
+//         id: 15536731,
+//         created_at: "2020-08-21T10:36:52.509Z",
+//         updated_at: "2020-08-21T10:36:52.509Z",
+//         coin: "EOS",
+//         quote: "USD",
+//         lastUpdated: "2020-08-21T10:34:04.000Z",
+//         marketCap: "3265954319.10009770000000000",
+//         price: "3.49159527052000000",
+//         percentChange1h: "-1.01946000000000000",
+//         percentChange24h: "2.63852000000000000",
+//         percentChange7d: "10.59320000000000000",
+//         volume24h: "2963208977.52188000000000000",
+//         uniq_item_id: "2e226c55-0951-5ae1-b6f4-450c1f86b9ee",
+//         close: 747.20138789128,
+//         date: "2020-08-21T10:34:04.000Z",
+//       },
+//     ],
+//   },
+// ];
 
 const rate = [
   {
-    TICKER: "USD",
-    DATE: "1998-01-01",
-    OPEN: 0,
-    HIGH: 0,
-    LOW: 0,
-    CLOSE: 5.96,
-    VOL: 0,
-    WAPRICE: 0,
-    NOMINAL: 1,
+    id: 15542049,
+    created_at: "2020-08-21T10:46:58.791Z",
+    updated_at: "2020-08-21T10:46:58.791Z",
+    coin: "EOS",
+    quote: "USD",
+    lastUpdated: "2020-08-21T10:44:05.000Z",
+    marketCap: "3257363644.18885000000000000",
+    price: "3.48241107596000000",
+    percentChange1h: "-1.08193000000000000",
+    percentChange24h: "2.30957000000000000",
+    percentChange7d: "10.29130000000000000",
+    volume24h: "2982244476.13784000000000000",
+    uniq_item_id: "d327e4dc-9786-5957-9736-6f8492ef7899",
+    close: 745.23597025544,
+    date: "2020-08-21T10:44:05.000Z",
   },
   {
-    TICKER: "USD",
-    DATE: "1998-01-06",
-    OPEN: 0,
-    HIGH: 0,
-    LOW: 0,
-    CLOSE: 5.963,
-    VOL: 0,
-    WAPRICE: 0,
-    NOMINAL: 1,
+    id: 15539390,
+    created_at: "2020-08-21T10:41:59.197Z",
+    updated_at: "2020-08-21T10:41:59.197Z",
+    coin: "EOS",
+    quote: "USD",
+    lastUpdated: "2020-08-21T10:38:05.000Z",
+    marketCap: "3262743179.22584600000000000",
+    price: "3.48816227676000000",
+    percentChange1h: "-1.11678000000000000",
+    percentChange24h: "2.51732000000000000",
+    percentChange7d: "10.48450000000000000",
+    volume24h: "2970874321.05054000000000000",
+    uniq_item_id: "3bcb6b9a-28c0-5527-aff1-466bb03d04b5",
+    close: 746.4667272266399,
+    date: "2020-08-21T10:38:05.000Z",
+  },
+  {
+    id: 15536731,
+    created_at: "2020-08-21T10:36:52.509Z",
+    updated_at: "2020-08-21T10:36:52.509Z",
+    coin: "EOS",
+    quote: "USD",
+    lastUpdated: "2020-08-21T10:34:04.000Z",
+    marketCap: "3265954319.10009770000000000",
+    price: "3.49159527052000000",
+    percentChange1h: "-1.01946000000000000",
+    percentChange24h: "2.63852000000000000",
+    percentChange7d: "10.59320000000000000",
+    volume24h: "2963208977.52188000000000000",
+    uniq_item_id: "2e226c55-0951-5ae1-b6f4-450c1f86b9ee",
+    close: 747.20138789128,
+    date: "2020-08-21T10:34:04.000Z",
   },
 ];
 
@@ -131,12 +160,12 @@ const PortfolioChart = (props) => {
     setIsMounted(true);
   }, []);
 
-  // const data = rate.map(d => {
-  //   return {
-  //     x: new Date(d.DATE),
-  //     y: d.CLOSE
-  //   };
-  // });
+  const data = rate.map(d => {
+    return {
+      x: new Date(d.date),
+      y: d.close
+    };
+  });
 
   // const data = props.data.map(d => {
   //   let x = new Date(d.date);
